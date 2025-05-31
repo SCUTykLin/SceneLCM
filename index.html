@@ -159,6 +159,60 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Automated generation of complex, interactive indoor scenes tailored to user prompt remains a formidable challenge. While existing methods achieve indoor scene synthesis, they struggle with rigid editing constraints, physical incoherence, excessive human effort, single-room limitations, and suboptimal material quality. 
+          </p>
+          <p>
+            To address these limitations, we propose SceneLCM, an end-to-end framework that synergizes Large Language Model (LLM) for layout design with Latent Consistency Model(LCM) for scene optimization. Our approach decomposes scene generation into four modular pipelines: (1) Layout Generation. We employ LLM-guided 3D spatial reasoning to convert textual descriptions into parametric blueprints(3D layout). And an iterative programmatic validation mechanism iteratively refines layout parameters through LLM-mediated dialogue loops; (2) Furniture Generation. SceneLCM employs Consistency Trajectory Sampling(CTS), a consistency distillation sampling loss guided by LCM, to form fast, semantically rich, and high-quality representations. We also offer two theoretical justification to demonstrate that our CTS loss is equivalent to consistency loss and its distillation error is bounded by the truncation error of the Euler solver; (3) Environment Optimization. We use a multiresolution texture field to encode the appearance of the scene, and optimize via CTS loss. To maintain cross-geometric texture coherence, we introduce a 
+normal-aware cross-attention decoder to predict RGB by cross-attending to the anchors locations in geometrically heterogeneous instance. (4)Physically Editing. SceneLCM supports physically editing by integrating physical simulation, achieved persistent physical realism.
+          </p>
+          <p>
+            Extensive experiments validate SceneLCM's superiority over state-of-the-art techniques,
+            showing its wide-ranging potential for diverse applications.
+          </p>
+
+          <p> Our main contributions: </p>
+          <ul>
+
+            <li>Layout Generation</li>
+            <ul>
+              <li>Iteractive Programmatic Verification Mechanism: Ensure that no overlapping occurs between furniture.</li>
+              <li>Cluster-based Orientation Assignment Strategy: Ensure accuracy orientation generation.</li>
+            </ul>
+          
+            <li>Object Generation</li>
+            <ul>
+              <li>Consistency Trajectory Sampling(CTS): Realistic and fast furniture generation.</li>
+              <li>CTS without noise: Efficiently generating furniture.</li>
+              <li>theorem analysis: 2 theorem and 1 corollary.</li>
+            </ul>
+          
+            <li>Environment Optimization</li>
+            <ul>
+              <li>Multi-resolution texture field and Normal-aware decoder:  high-resolution, style consistency, and rich texture generation</li>
+              <li>Optimization via CTS without noise: Realistic texture generation</li>
+              <li>zigzag adaptive camera trajectory: Multi-scale Scene Generation</li>
+              <li>several techniques for stability:  Improve numerical stability</li>
+            </ul>
+            <li>Physical edition</li>
+          
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -213,72 +267,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Automated generation of complex, interactive indoor scenes tailored to user prompt remains a formidable challenge. While existing methods achieve indoor scene synthesis, they struggle with rigid editing constraints, physical incoherence, excessive human effort, single-room limitations, and suboptimal material quality. 
-          </p>
-          <p>
-            To address these limitations, we propose SceneLCM, an end-to-end framework that synergizes Large Language Model (LLM) for layout design with Latent Consistency Model(LCM) for scene optimization. Our approach decomposes scene generation into four modular pipelines: (1) Layout Generation. We employ LLM-guided 3D spatial reasoning to convert textual descriptions into parametric blueprints(3D layout). And an iterative programmatic validation mechanism iteratively refines layout parameters through LLM-mediated dialogue loops; (2) Furniture Generation. SceneLCM employs Consistency Trajectory Sampling(CTS), a consistency distillation sampling loss guided by LCM, to form fast, semantically rich, and high-quality representations. We also offer two theoretical justification to demonstrate that our CTS loss is equivalent to consistency loss and its distillation error is bounded by the truncation error of the Euler solver; (3) Environment Optimization. We use a multiresolution texture field to encode the appearance of the scene, and optimize via CTS loss. To maintain cross-geometric texture coherence, we introduce a 
-normal-aware cross-attention decoder to predict RGB by cross-attending to the anchors locations in geometrically heterogeneous instance. (4)Physically Editing. SceneLCM supports physically editing by integrating physical simulation, achieved persistent physical realism.
-          </p>
-          <p>
-            Extensive experiments validate SceneLCM's superiority over state-of-the-art techniques,
-            showing its wide-ranging potential for diverse applications.
-          </p>
-
-          <p> Our main contributions: </p>
-          <ul>
-
-            <li>Layout Generation</li>
-            <ul>
-              <li>Iteractive Programmatic Verification Mechanism</li>
-              <li>Cluster-based Orientation Assignment Strategy</li>
-            </ul>
-          
-            <li>Object Generation</li>
-            <ul>
-              <li>Consistency Trajectory Sampling(CTS)</li>
-              <li>CTS without noise</li>
-              <li>theorem analysis</li>
-            </ul>
-          
-            <li>Environment Optimization</li>
-            <ul>
-              <li>Multi-resolution texture field and Normal-aware decoder</li>
-              <li>Optimization via CTS without noise</li>
-              <li>zigzag adaptive camera trajectory</li>
-              <li>several techniques for stability</li>
-            </ul>
-            <li>Physical edition</li>
-          
-          </ul>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
