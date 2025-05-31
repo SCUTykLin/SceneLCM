@@ -63,9 +63,9 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://github.com/SCUTykLin/Multi-StyleGS.git">
+          <!-- <a class="navbar-item" href="https://github.com/SCUTykLin/Multi-StyleGS.git">
             Multi-Style GS
-          </a>
+          </a> -->
           <a class="navbar-item" href="https://SCUTykLin.github.io/SceneLCM">
             SceneLCM
           </a>
@@ -93,7 +93,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -102,7 +102,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -212,32 +212,44 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Automated generation of complex, interactive indoor scenes tailored to user prompt remains a formidable challenge. While existing methods achieve indoor scene synthesis, they struggle with rigid editing constraints, physical incoherence, excessive human effort, single-room limitations, and suboptimal material quality. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To address these limitations, we propose SceneLCM, an end-to-end framework that synergizes Large Language Model (LLM) for layout design with Latent Consistency Model(LCM) for scene optimization. Our approach decomposes scene generation into four modular pipelines: (1) Layout Generation. We employ LLM-guided 3D spatial reasoning to convert textual descriptions into parametric blueprints(3D layout). And an iterative programmatic validation mechanism iteratively refines layout parameters through LLM-mediated dialogue loops; (2) Furniture Generation. SceneLCM employs Consistency Trajectory Sampling(CTS), a consistency distillation sampling loss guided by LCM, to form fast, semantically rich, and high-quality representations. We also offer two theoretical justification to demonstrate that our CTS loss is equivalent to consistency loss and its distillation error is bounded by the truncation error of the Euler solver; (3) Environment Optimization. We use a multiresolution texture field to encode the appearance of the scene, and optimize via CTS loss. To maintain cross-geometric texture coherence, we introduce a 
+normal-aware cross-attention decoder to predict RGB by cross-attending to the anchors locations in geometrically heterogeneous instance. (4)Physically Editing. SceneLCM supports physically editing by integrating physical simulation, achieved persistent physical realism.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Extensive experiments validate SceneLCM's superiority over state-of-the-art techniques,
+            showing its wide-ranging potential for diverse applications.
           </p>
+
+          <p> Our main contributions: </p>
+          <ul>
+
+            <li>Layout Generation</li>
+            <ul>
+              <li>Iteractive Programmatic Verification Mechanism</li>
+              <li>Cluster-based Orientation Assignment Strategy</li>
+            </ul>
+          
+            <li>Object Generation</li>
+            <ul>
+              <li>Consistency Trajectory Sampling(CTS)</li>
+              <li>CTS without noise</li>
+              <li>theorem analysis</li>
+            </ul>
+          
+            <li>Environment Optimization</li>
+            <ul>
+              <li>Multi-resolution texture field and Normal-aware decoder</li>
+              <li>Optimization via CTS without noise</li>
+              <li>zigzag adaptive camera trajectory</li>
+              <li>several techniques for stability</li>
+            </ul>
+            <li>Physical edition</li>
+          
+          </ul>
+
         </div>
       </div>
     </div>
