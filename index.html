@@ -384,21 +384,30 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            There's a lot of excellent works that related to ours.
+            These methods also generate indoor scene based on layout.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+            <a href="https://arxiv.org/abs/2312.05208">ControlRoom3D</a> fine-tune two diffusion model conditioned on bounding box,
+            then generate a panorama for scene initialization. Subsequently, mesh post-processing methods are applied to the scene
+            to optimize it. However, ControlRoom3D requires manual definition of the layout and cannot decouple objects from the
+            scene for flexible editing.
           </p>
           <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
+            <a href="https://arxiv.org/abs/2404.03575">DreamScene</a> generates each piece of furniture individually and
+            subsequently combines them to optimize the scene. However, DreamScene requires manual definition of the layout and
+            cannot perform physically plausible editing. Furthermore, due to their lack of geometric prior knowledge about the
+            environment, the environment often blends with objects, resulting in multi-view inconsistencies.
+
           </p>
+          
           <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+            <a href="https://arxiv.org/abs/2410.09049">SceneCraft</a> introduces an idea similar to ControlRoom3D and fine-tune two
+            diffusion model. SceneCraft directly optimizes layout via sds loss. However, SceneCraft requires manual definition of
+            the layout and cannot decouple objects from the scene for flexible editing, let alone enable physically plausible
+            editing.
           </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+
         </div>
       </div>
     </div>
