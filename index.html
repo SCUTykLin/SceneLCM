@@ -573,6 +573,43 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
   </div>
   </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <h1 class="title is-3">Additional Results</h1>
+    <div class="columns is-centered">
+
+
+      <!-- env. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Render Environment Across Different Rooms</h2>
+          <p>
+            We can navigate between multiple rooms while rendering them simultaneously.
+          </p>
+          <video id="bedroom_style1" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/env/layout1_4rooms.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ env. -->
+      <!-- physic. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Physical Editing</h2>
+          <p>
+            We tilt the room by 30 degrees, causing the furniture to move due to gravity.
+          </p>
+          <video id="bedroom_style2" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/env/physical.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!--/ physic. -->
+
+    </div>
+
+  </div>
+</section>
       <section class="section">
         <div class="container is-max-desktop">
     <!-- Animation. -->
@@ -584,7 +621,6 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
         <h3 class="title is-4">Render Environment Across Different Rooms</h3>
         <div class="content has-text-justified">
           <p>
-            We can navigate between multiple rooms while rendering them simultaneously.
             <b>We generate multiple rooms simultaneously.
               In the previous examples, although each video was rendered within a single
               room, one can still see other rooms and their furniture at the doorway of the room</b>
@@ -614,28 +650,6 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
         </div>
         <br/>
         <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
     </div>
     <!--/ Animation. -->
