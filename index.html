@@ -581,17 +581,18 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h3 class="title is-4">Render Environment Across Different Rooms</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            We can navigate between multiple rooms while rendering them simultaneously.
+            <b>We generate multiple rooms simultaneously.
+              In the previous examples, although each video was rendered within a single
+              room, one can still see other rooms and their furniture at the doorway of the room</b>
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/interpolation/stacked/0001.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
             <p>Start Frame</p>
@@ -605,7 +606,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
                    step="1" min="0" max="100" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
+            <img src="./static/interpolation/stacked/0201.png"
                  class="interpolation-image"
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
