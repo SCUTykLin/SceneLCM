@@ -956,8 +956,8 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 
 </div>
 
-            </div>
-            </section>
+  </div>
+  </section>
 
     <!-- Concurrent Work. -->
     <!-- <div class="columns is-centered">
@@ -997,6 +997,84 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 
   </div>
 </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h1 class="title is-3"> Ablation Study of CTS </h1>
+      <p>The SDS and ISM models require significantly more iterations and longer training durations to achieve comparable
+        performance to ours.</p>
+      <div class="columns is-centered">
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Latent Consistency Model + SDS </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/truck1_SDS.mp4" type="video/mp4">
+            </video>
+            <p> 5000 epoch, batch size=4, ~1.1h </p>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Latent Consistency Model + ISM </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/truck1_ISM.mp4" type="video/mp4">
+            </video>
+            <p> 4500 epoch, batch size=4, ~40min(unstable) </p>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Our </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/truck1_CTS.mp4" type="video/mp4">
+            </video>
+            <p> <b> 3000 epoch, batch size=4, ~28min </p>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="columns is-centered">
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Latent Consistency Model + SDS </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/tree1_SDS.mp4" type="video/mp4">
+            </video>
+            <p> 5000 epoch, batch size=4, ~1.1h </p>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Latent Consistency Model + ISM </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/tree1_ISM.mp4" type="video/mp4">
+            </video>
+            <p> 4500 epoch, batch size=4, ~40min(unstable) </p>
+          </div>
+        </div>
+  
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Our </h2>
+            <video id="DreamScene_Industrial" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/additional/tree1_CTS.mp4" type="video/mp4">
+            </video>
+            <p> <b> 3000 epoch, batch size=4, ~28min </p>
+          </div>
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  
+  </section>
 
 
 
