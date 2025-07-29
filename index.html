@@ -85,7 +85,7 @@
           <h1 class="title is-1 publication-title">SceneLCM: End-to-End Layout-Guided Interactive Indoor Scene Generation with Latent Consistency Model</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a>Anonymous</a>
+              Anonymous
               </span>
               <!-- <span class="author-block">
                 <a>Jiabao Lei, School of Data Science, The Chinese University of Hong Kong, Shenzhen, jiabaolei@link.cuhk.edu.cn</a>
@@ -99,7 +99,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -107,8 +107,8 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
-              <span class="link-block">
+              </span> -->
+              <!-- <span class="link-block">
                 <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -116,9 +116,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
 
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -126,10 +126,10 @@
                   </span>
                   <span>Supplement Detail</span>
                   </a>
-              </span>
+              </span> -->
 
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://scutyklin.github.io/SceneLCM/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -137,7 +137,7 @@
                   </span>
                   <span>Code(coming soon)</span>
                   </a>
-              </span>
+              </span> -->
 
             </div>
 
@@ -215,22 +215,40 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <h2 class="title is-3">Contents</h2>
+              <h5>(Clicking on a subheading will jump to the corresponding section.)</h5>
               <div class="content has-text-justified">
                 <ol>
                   <li> <a href="#results-carousel_layout">
-                      <h4> 4 layout experiments results </h4>
+                      <b> 4 layout experiments results </b>
                     </a> </li>
                   <li> <a href="#Environment_Editing">
-                      <h4>Environment Editing </h4>
-                    </a> </li>
-                  <li> Additional Results </li>
-                  <li> Object Generation </li>
-                  <li> Animation </li>
-                  <li> Japanese Style VS Chinses Traditional Style </li>
-                  <li> Texture map optimization VS UV Parameters </li>
-                  <li> Comparison of Additional Style(Industrial, baroque) </li>
-                  <li> Ablation Study of CTS </li>
-                  <li> </li>
+                      <b>Environment Editing </b>
+                      </a> </li>
+                      <li> <a href="#Additional_Results">
+                          <b> Additional Results </b>
+                        </a></li>
+                      <li> <a href="#Object_Generation">
+                          <b> Object Generation </b>
+                        </a> </li>
+                      <li><a href="#Animation">
+                          <b> Animation </b>
+                        </a> </li>
+                      
+                      <li><a href="#Japanese_Style_VS_Chinses_Traditional_Style">
+                          <b> Japanese Style VS Chinses Traditional Style </b>
+                        </a> </li>
+                      
+                      <li><a href="#Texture_map_optimization_VS_UV_Parameters">
+                          <b> Texture map optimization VS UV Parameters </b>
+                        </a> </li>
+                      
+                      <li><a href="#Comparison_of_Additional_Style">
+                          <b> Comparison of Additional Style(Industrial, baroque) </b>
+                        </a> </li>
+                      
+                      <li><a href="#Ablation_Study_of_CTS">
+                          <b> Ablation Study of CTS </b>
+                        </a> </li>
                 </ol>
           
               </div>
@@ -605,7 +623,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
   </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div id="Additional_Results" class="container is-max-desktop">
     <h1 class="title is-3">Additional Results</h1>
     <div class="columns is-centered">
 
@@ -643,7 +661,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div id="Object_Generation" class="container is-max-desktop">
     <h1 class="title is-3">Object Generation</h1>
     <div class="columns is-centered">
 
@@ -831,7 +849,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
         <div class="container is-max-desktop">
     <!-- Animation. -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
+      <div id="Animation" class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
@@ -872,7 +890,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
     <!--/ Animation. -->
 
     <section class="section">
-      <div class="container is-max-desktop">
+      <div id="Japanese_Style_VS_Chinses_Traditional_Style" class="container is-max-desktop">
         <h1 class="title is-3"> Japanese Style VS Chinses Traditional Style </h1>
         <div class="columns is-centered">
           <!-- 日本风格 -->
@@ -906,7 +924,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
               </div>
               </section>
 <section class="section">
-  <div class="container is-max-desktop">
+  <div id="Texture_map_optimization_VS_UV_Parameters" class="container is-max-desktop">
     <h1 class="title is-3"> Texture map optimization VS UV Parameters </h1>
     <div class="columns is-centered">
       <!-- Texture -->
@@ -940,7 +958,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div id="Comparison_of_Additional_Style" class="container is-max-desktop">
       <h1 class="title is-3"> Comparison of Additional Style(Industrial, baroque) </h1>
       <div class="columns is-centered">
         <!-- SceneCraft风格 -->
@@ -1132,7 +1150,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 </section>
 
   <section class="section">
-    <div class="container is-max-desktop">
+    <div id="Ablation_Study_of_CTS" class="container is-max-desktop">
       <h1 class="title is-3"> Ablation Study of CTS </h1>
       <p>The SDS and ISM models require significantly more iterations and longer training durations to achieve comparable
         performance to ours.</p>
