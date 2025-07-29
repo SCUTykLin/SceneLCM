@@ -235,7 +235,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
                         </a> </li>
                       
                       <li><a href="#Japanese_Style_VS_Chinses_Traditional_Style">
-                          <b> Japanese Style VS Chinses Traditional Style </b>
+                          <b> Japanese Style VS Chinese Traditional Style </b>
                         </a> </li>
                       
                       <li><a href="#Texture_map_optimization_VS_UV_Parameters">
@@ -891,7 +891,7 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
 
     <section class="section">
       <div id="Japanese_Style_VS_Chinses_Traditional_Style" class="container is-max-desktop">
-        <h1 class="title is-3"> Japanese Style VS Chinses Traditional Style </h1>
+        <h1 class="title is-3"> Japanese Style VS Chinese Traditional Style </h1>
         <div class="columns is-centered">
           <!-- 日本风格 -->
           <div class="column">
@@ -1262,6 +1262,58 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
   
     </div>
   
+  </section>
+
+  <section class="section">
+    <div id="Quantitative metrics" class="columns is-centered"></div>
+    <table>
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Set-the-Scene</th>
+          <th>SceneCraft</th>
+          <th> DreamScene </th>
+          <th>Our </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;"> CLIP Score (Style, room, prompt)</td>
+          <td style="text-align: center; vertical-align: middle;">19.50, 22.34, 23.35</td>
+          <td style="text-align: center; vertical-align: middle;">21.12, 23.37, 23.53</td>
+          <td style="text-align: center; vertical-align: middle;">23.85, 24.45, 23.33</td>
+          <td style="text-align: center; vertical-align: middle;">24.10, 23.59, 24.20</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;"> Avg. CLIP Score</td>
+          <td style="text-align: center; vertical-align: middle;">21.73</td>
+          <td style="text-align: center; vertical-align: middle;">22.67</td>
+          <td style="text-align: center; vertical-align: middle;">23.87</td>
+          <td style="text-align: center; vertical-align: middle;">23.96</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;"> Inception Score</td>
+          <td style="text-align: center; vertical-align: middle;">3.36</td>
+          <td style="text-align: center; vertical-align: middle;">3.59</td>
+          <td style="text-align: center; vertical-align: middle;">4.46</td>
+          <td style="text-align: center; vertical-align: middle;">4.51</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;"> VQAscore </td>
+          <td style="text-align: center; vertical-align: middle;">0.33</td>
+          <td style="text-align: center; vertical-align: middle;">0.65</td>
+          <td style="text-align: center; vertical-align: middle;">0.71</td>
+          <td style="text-align: center; vertical-align: middle;">0.78</td>
+        </tr>
+        <tr>
+          <td style="text-align: center; vertical-align: middle;"> Consistency </td>
+          <td style="text-align: center; vertical-align: middle;">2.17</td>
+          <td style="text-align: center; vertical-align: middle;">1.55</td>
+          <td style="text-align: center; vertical-align: middle;">1.36</td>
+          <td style="text-align: center; vertical-align: middle;">1.07</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
 
