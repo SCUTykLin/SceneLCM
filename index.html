@@ -1222,6 +1222,39 @@ normal-aware cross-attention decoder to predict RGB by cross-attending to the an
   
       </div>
   
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Derivation of Floss Matching loss </h2>
+            <img src="./static/fm_loss/derivationFM.png" alt="Derivation of Floss Matching loss">
+            <p> not work </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h2 class="title is-3"> Denosing function converges faster then noise in terms of the sample likelihood </h2>
+            <img src="./static/fm_loss/denosing_proof.png" alt="Derivation of Floss Matching loss">
+            <ol>
+              <li>
+                Intuitively, noise matching is a local matching for the next step of the current image, whereas denoising
+                matching is a global matching between the current image and the expected image. The two exhibit
+                significant divergence at the beginning, leading to gradient conflicts.
+              </li>
+              <li>
+                Theoretically, denoising function is faster converages than noise, the convergence speeds of the two are
+                inconsistent.
+              </li>
+              <li>
+                Although the CTS loss consists of two terms, it is important to note that each term is independently
+                controlled by a distinct coefficient that regulates its convergence speed
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
   
     </div>
   
